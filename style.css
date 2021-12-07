@@ -94,3 +94,8 @@ font-size: 14px;
   outline: 0;
 }
 
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
+

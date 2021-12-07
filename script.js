@@ -8,31 +8,27 @@ let currentActive = 1;
 next.addEventListener("click", () => {
   currentActive++;
 
-  if(currentActive > circles.length) {
+  if (currentActive > circles.length) {
     currentActive = circles.length;
   }
-  update()
-
+  update();
 });
 
 prev.addEventListener("click", () => {
   currentActive--;
 
-  if(currentActive > 1) {
-   currentActive = 1;
+  if (currentActive > 1) {
+    currentActive = 1;
   }
-  update()
-
+  update();
 });
 
-
-function update {
-  circles.forEach((circle, idx) =>{
-    if(idx < currentActive) {
-      circle.classList.add('active')
+function update() {
+  circles.forEach((circle, idx) => {
+    if (idx < currentActive) {
+      circle.classList.add("active");
     } else {
-      circle.classList.remove('active')
+      circle.classList.remove("active");
     }
-
-  })
+  });
 }
